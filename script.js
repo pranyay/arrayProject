@@ -4,9 +4,11 @@ const work= [
     { task: 3, time: "12:00", taskName: "Lunch" }
 ];
 
-let workList= document.getElementById("workList")
-work.forEach(user=>{
-    const li= document.createElement("li");
-    li.textContent= `Task: ${user.task}, Time: ${user.time}, TaskName: ${user.taskName}` ;
-    workList.appendChild(li);
-});
+function displayTasks(work, workList) {
+    let workList= document.getElementById("workList")
+    work.forEach(user=>{
+        const li= document.createElement("li");
+        li.textContent= `Task: ${user.task}, Time: ${user.time}, TaskName: ${user.taskName}` ;
+        workList.appendChild(li);
+    });
+}
